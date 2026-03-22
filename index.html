@@ -1,3 +1,18 @@
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yJKgOSy5fffgna_aaDo4WDYfOmUKIhVlEM0qpOxbVqPA4ASqlG4PfwzzLcaSbsx9pcxyx96u?gv=true',
+      color: '#039BE5',
+      label: 'Agendar um compromisso',
+      target,
+    });
+  });
+})();
+</script>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,15 +30,14 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        /* Adiciona uma transição suave para a exibição do calendário */
         #calendarContainer {
             transition: all 0.5s ease-in-out;
             max-height: 0;
             overflow: hidden;
         }
         #calendarContainer.visible {
-            max-height: 700px; /* Altura suficiente para o iframe */
-            margin-top: 1.5rem; /* Espaçamento quando visível */
+            max-height: 700px;
+            margin-top: 1.5rem;
         }
     </style>
 </head>
@@ -96,14 +110,12 @@
         const calendarContainer = document.getElementById('calendarContainer');
 
         scheduleButton.addEventListener('click', () => {
-            // Alterna a classe 'visible' para mostrar ou esconder o calendário
             calendarContainer.classList.toggle('visible');
             
-            // Rola a tela para o calendário quando ele se torna visível
             if (calendarContainer.classList.contains('visible')) {
                 setTimeout(() => {
                     calendarContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100); // Pequeno atraso para garantir que a animação comece
+                }, 100);
             }
         });
     </script>
