@@ -1,18 +1,3 @@
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<script>
-(function() {
-  var target = document.currentScript;
-  window.addEventListener('load', function() {
-    calendar.schedulingButton.load({
-      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yJKgOSy5fffgna_aaDo4WDYfOmUKIhVlEM0qpOxbVqPA4ASqlG4PfwzzLcaSbsx9pcxyx96u?gv=true',
-      color: '#039BE5',
-      label: 'Agendar um compromisso',
-      target,
-    });
-  });
-})();
-</script>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -30,14 +15,17 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        #calendarContainer {
+        /* Wrapper que controla a expansão e o fade-in */
+        #calendarWrapper {
             transition: all 0.5s ease-in-out;
             max-height: 0;
+            opacity: 0;
             overflow: hidden;
         }
-        #calendarContainer.visible {
-            max-height: 700px;
-            margin-top: 1.5rem;
+        #calendarWrapper.visible {
+            max-height: 1000px;
+            opacity: 1;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -48,7 +36,7 @@
         <header class="text-center">
             <img 
                 src="https://placehold.co/128x128/B2B8A3/FFFFFF?text=RS" 
-                alt="Foto de perfil de Raiana Santos" 
+                alt="Foto de perfil de Raiana Sousa" 
                 class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-[#B2B8A3] shadow-md"
             >
             <h1 class="text-3xl font-bold text-gray-900">Raiana Sousa</h1>
@@ -88,33 +76,47 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
                 Agendar uma conversa
             </button>
-        </main>
-        
-        <div id="calendarContainer" class="rounded-lg">
-            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yJKgOSy5fffgna_aaDo4WDYfOmUKIhVlEM0qpOxbVqPA4ASqlG4PfwzzLcaSbsx9pcxyx96u?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
-        </div>
 
-        <footer class="text-center mt-8">
+            <div id="calendarWrapper">
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" class="w-6 h-6" alt="Ícone Google Agenda">
+                    <h2 class="text-xl font-semibold text-gray-700">Horários</h2>
+                </div>
+                <div id="calendarContainer" class="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+                    <iframe 
+                        src="https://calendar.google.com/calendar/appointments/AcZssZ08ZpFF6R4ASZ7IHJkWFpsuQa55bPZYCNdduzg=?gv=true" 
+                        style="border: 0" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center mt-12">
             <p class="text-gray-500">Entre em contato:</p>
             <a href="mailto:ssousaraiana@gmail.com" class="text-gray-800 hover:text-[#B2B8A3] transition-colors duration-300 font-medium">
                 ssousaraiana@gmail.com
             </a>
             <p class="text-xs text-gray-400 mt-4">
-                © 2025 Raiana Santos. Todos os direitos reservados.
+                © 2025 Raiana Sousa. Todos os direitos reservados.
             </p>
         </footer>
     </div>
 
     <script>
         const scheduleButton = document.getElementById('scheduleButton');
-        const calendarContainer = document.getElementById('calendarContainer');
+        const calendarWrapper = document.getElementById('calendarWrapper');
 
         scheduleButton.addEventListener('click', () => {
-            calendarContainer.classList.toggle('visible');
+            // Alterna a visibilidade da seção inteira
+            calendarWrapper.classList.toggle('visible');
             
-            if (calendarContainer.classList.contains('visible')) {
+            // Roda suavemente até o calendário se ele estiver visível
+            if (calendarWrapper.classList.contains('visible')) {
                 setTimeout(() => {
-                    calendarContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    calendarWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }, 100);
             }
         });
