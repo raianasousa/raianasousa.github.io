@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raiana Sousa - Product Manager</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23B2B8A3%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2250%22 fill=%22white%22 font-family=%22sans-serif%22>RS</text></svg>">
+    <title>Raiana Santos - Product Manager</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231B4332%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2250%22 fill=%22white%22 font-family=%22sans-serif%22>RS</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-        /* Wrapper que controla a expansão e o fade-in */
         #calendarWrapper {
-            transition: all 0.5s ease-in-out;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             max-height: 0;
             opacity: 0;
             overflow: hidden;
@@ -25,84 +23,99 @@
         #calendarWrapper.visible {
             max-height: 1000px;
             opacity: 1;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
     </style>
 </head>
-<body class="bg-[#F4F1EC] text-gray-800 flex items-center justify-center min-h-screen p-4">
+<body class="bg-[#F4F6F4] text-gray-800 flex items-center justify-center min-h-screen p-4 sm:p-6">
 
-    <div class="bg-white w-full max-w-lg mx-auto rounded-2xl shadow-lg p-8 md:p-10 transform transition-all duration-500">
+    <div class="bg-white w-full max-w-md mx-auto rounded-3xl shadow-xl overflow-hidden border border-gray-100">
         
-        <header class="text-center">
-            <img 
-                src="https://placehold.co/128x128/B2B8A3/FFFFFF?text=RS" 
-                alt="Foto de perfil de Raiana Sousa" 
-                class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-[#B2B8A3] shadow-md"
-            >
-            <h1 class="text-3xl font-bold text-gray-900">Raiana Sousa</h1>
-            <p class="text-gray-500 font-medium mt-1">Senior Technical Product Manager | AI & B2B SaaS</p>
-        </header>
-
-        <main class="mt-8 space-y-4">
+        <!-- Header Banner & Avatar -->
+        <div class="relative bg-[#1B4332] h-32 flex justify-center items-end pb-0">
+            <!-- Tagline discreta no estilo da imagem -->
+            <span class="absolute top-4 right-5 text-[#C2847A] font-serif italic text-xs tracking-wider opacity-90">outcome over output.</span>
             
-            <a href="https://github.com/raianasousa" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-white hover:bg-[#B2B8A3] border border-gray-300 hover:border-[#B2B8A3] text-gray-700 hover:text-white font-semibold py-3 px-5 rounded-lg transition-all transform hover:scale-105 duration-300 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                Meu Portfólio / GitHub
-            </a>
-                        
-            <a href="https://www.linkedin.com/in/ssouraiana/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-white hover:bg-[#B2B8A3] border border-gray-300 hover:border-[#B2B8A3] text-gray-700 hover:text-white font-semibold py-3 px-5 rounded-lg transition-all transform hover:scale-105 duration-300 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                Perfil do LinkedIn
-            </a>
-
-            <div class="flex flex-col sm:flex-row gap-3 w-full">
-                <a href="https://drive.google.com/file/d/1vaWzJ6d7ojbdGGJPzOJECIhxp_1_fakl/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center bg-white hover:bg-[#B2B8A3] border border-gray-300 hover:border-[#B2B8A3] text-gray-700 hover:text-white font-semibold py-3 px-3 rounded-lg transition-all transform hover:scale-105 duration-300 shadow-sm text-sm sm:text-base">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    CV (Português)
-                </a>
-                
-                <a href="https://drive.google.com/file/d/145hUzZCzBI6ljItEvMRtgwQV1liU3obK/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center bg-white hover:bg-[#B2B8A3] border border-gray-300 hover:border-[#B2B8A3] text-gray-700 hover:text-white font-semibold py-3 px-3 rounded-lg transition-all transform hover:scale-105 duration-300 shadow-sm text-sm sm:text-base">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M12 18v-6"></path><path d="m9 15 3 3 3-3"></path></svg>
-                    Resume (English)
-                </a>
-            </div>
-            
-            <a href="https://medium.com/@raianassousa" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-white hover:bg-[#B2B8A3] border border-gray-300 hover:border-[#B2B8A3] text-gray-700 hover:text-white font-semibold py-3 px-5 rounded-lg transition-all transform hover:scale-105 duration-300 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="6.5"></line></svg>
-                Meus artigos no Medium
-            </a>
-
-            <button id="scheduleButton" class="flex items-center justify-center w-full bg-white hover:bg-[#B2B8A3] border border-gray-300 hover:border-[#B2B8A3] text-gray-700 hover:text-white font-semibold py-3 px-5 rounded-lg transition-all transform hover:scale-105 duration-300 shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
-                Agendar uma conversa
-            </button>
-
-            <div id="calendarWrapper">
-                <div class="flex items-center gap-2 mb-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" class="w-6 h-6" alt="Ícone Google Agenda">
-                    <h2 class="text-xl font-semibold text-gray-700">Horários</h2>
-                </div>
-                <div id="calendarContainer" class="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
-                    <iframe 
-                        src="https://calendar.google.com/calendar/appointments/AcZssZ08ZpFF6R4ASZ7IHJkWFpsuQa55bPZYCNdduzg=?gv=true" 
-                        style="border: 0" 
-                        width="100%" 
-                        height="600" 
-                        frameborder="0">
-                    </iframe>
+            <div class="absolute -bottom-12">
+                <div class="p-1.5 bg-white rounded-full shadow-md">
+                    <img 
+                        src="https://placehold.co/128x128/1B4332/FFFFFF?text=RS" 
+                        alt="Foto de perfil de Raiana Santos" 
+                        class="w-24 h-24 rounded-full object-cover border-2 border-[#C2847A]"
+                    >
                 </div>
             </div>
-        </main>
+        </div>
 
-        <footer class="text-center mt-12">
-            <p class="text-gray-500">Entre em contato:</p>
-            <a href="mailto:ssousaraiana@gmail.com" class="text-gray-800 hover:text-[#B2B8A3] transition-colors duration-300 font-medium">
-                ssousaraiana@gmail.com
-            </a>
-            <p class="text-xs text-gray-400 mt-4">
-                © 2025 Raiana Sousa. Todos os direitos reservados.
+        <!-- Conteúdo Principal -->
+        <div class="pt-16 pb-8 px-6 text-center">
+            <h1 class="text-2xl font-bold text-[#1B4332]">Raiana Santos <span class="text-xs font-normal text-gray-400 font-sans">(ela/dela)</span></h1>
+            <p class="text-sm font-medium text-gray-600 mt-1 leading-relaxed">
+                Senior Product Manager | Platform, PIX & AI Strategy
             </p>
-        </footer>
+            <p class="text-xs text-[#C2847A] font-semibold tracking-wide uppercase mt-1">Gaming Enthusiast</p>
+
+            <!-- Links -->
+            <main class="mt-6 space-y-3">
+                <a href="https://www.linkedin.com/in/ssouraiana/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between w-full bg-[#1B4332] hover:bg-[#122e22] text-white font-medium py-3.5 px-5 rounded-xl transition-all duration-300 shadow-sm group">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 fill-current text-[#C2847A]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        Perfil do LinkedIn
+                    </span>
+                    <span class="text-xs opacity-60 group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+
+                <a href="https://github.com/raianasousa" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between w-full bg-gray-50 hover:bg-[#F4F6F4] border border-gray-200 text-gray-700 hover:border-[#1B4332] font-medium py-3.5 px-5 rounded-xl transition-all duration-300 group">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 stroke-current text-[#1B4332]" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        Meu Portfólio / GitHub
+                    </span>
+                    <span class="text-xs opacity-40 group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+
+                <a href="https://medium.com/@raianassousa" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between w-full bg-gray-50 hover:bg-[#F4F6F4] border border-gray-200 text-gray-700 hover:border-[#1B4332] font-medium py-3.5 px-5 rounded-xl transition-all duration-300 group">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 stroke-current text-[#1B4332]" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="6.5"></line></svg>
+                        Artigos no Medium
+                    </span>
+                    <span class="text-xs opacity-40 group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+
+                <button id="scheduleButton" class="flex items-center justify-between w-full border-2 border-[#C2847A] text-[#C2847A] hover:bg-[#C2847A] hover:text-white font-semibold py-3.5 px-5 rounded-xl transition-all duration-300 group mt-2">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+                        Agendar uma conversa
+                    </span>
+                    <span class="text-xs transition-transform group-hover:translate-y-0.5">↓</span>
+                </button>
+
+                <!-- Calendário Embutido -->
+                <div id="calendarWrapper">
+                    <div class="pt-2">
+                        <div id="calendarContainer" class="rounded-2xl overflow-hidden border border-gray-200 bg-gray-50">
+                            <iframe 
+                                src="https://calendar.google.com/calendar/appointments/AcZssZ08ZpFF6R4ASZ7IHJkWFpsuQa55bPZYCNdduzg=?gv=true" 
+                                style="border: 0" 
+                                width="100%" 
+                                height="520" 
+                                frameborder="0">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Rodapé -->
+            <footer class="mt-8 pt-6 border-t border-gray-100">
+                <p class="text-xs text-gray-400">Entre em contato via e-mail:</p>
+                <a href="mailto:ssousaraiana@gmail.com" class="text-sm font-semibold text-[#1B4332] hover:text-[#C2847A] transition-colors">
+                    ssousaraiana@gmail.com
+                </a>
+                <p class="text-[10px] text-gray-300 mt-4">
+                    © 2026 Raiana Santos. Todos os direitos reservados.
+                </p>
+            </footer>
+        </div>
     </div>
 
     <script>
@@ -110,14 +123,11 @@
         const calendarWrapper = document.getElementById('calendarWrapper');
 
         scheduleButton.addEventListener('click', () => {
-            // Alterna a visibilidade da seção inteira
             calendarWrapper.classList.toggle('visible');
-            
-            // Roda suavemente até o calendário se ele estiver visível
             if (calendarWrapper.classList.contains('visible')) {
                 setTimeout(() => {
                     calendarWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
+                }, 150);
             }
         });
     </script>
